@@ -6,13 +6,85 @@
   <title>Document</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" integrity="sha256-gvEnj2axkqIj4wbYhPjbWV7zttgpzBVEgHub9AAZQD4=" crossorigin="anonymous" />
   <style>
+    p{
+      /* column-width : 150px;
+      column-count : 3; */
 
+      color : blue;
+      text-align : justify;
+      columns : 150px 3;
+      column-gap : 30px;
+      /* column-rule : 2px dashed red; */
+      column-rule : 2px dashed;
+    }
   </style>
   <template>
-  
+    Multi-Columns : 일반 블록 레이아웃을 확장하여
+    여러 텍스트 다단으로 쉽게 정리하며, 가독성 확보
+
+    //////////////////////////
+    columns : 다단을 정의
+
+    auto : 브라우저가 단의 너비와 개수를 설정 / 기본값 : auto
+    column-width : 단의 최적 너비를 설정 / 기본값 : auto
+    column-count : 단의 개수를 설정 / 기본값 : auto
+
+    columns : 너비 개수;
+    .text{
+      columns : 100px 2;
+    }
+
+    //////////////////////////
+    column-width : 단의 최적 너비를 설정
+
+    auto : 브라우저가 단의 너비를 설정 / 기본값 : auto
+    단위 : px, em, cm 등 단위로 지정
+
+    column-width : 너비;
+
+    각 단이 줄어들 수 있는 최적 너비(최소 너비)를 설정하며,
+    요소의 너비가 가변하여 하나의 단이 최적 너비보다 줄어들 경우 단의 개수가 조정된다.
+
+    //////////////////////////
+    column-count : 단의 개수를 설정
+
+    auto : 브라우저가 단의 개수를 설정 / 기본값 : auto
+    숫자 : 단의 개수를 설정
+
+    column-count : 개수;
+
+    //////////////////////////
+    column-gap : 단과 단 사이의 간격 설정
+
+    normal : 브라우저가 단과 단 사이의 간격을 설정(1em) / 기본값 : normal
+    단위 : px, em, cm 등 단위로 지정
+
+    column-gap : 간격;
+
+    //////////////////////////
+    column-rule : 단과 단 사이의 (구분)선을 지정
+
+    column-width : 선의 두께를 지정 / 기본값 : medium
+    column-style : 선의 종류를 지정 / 기본값 : none
+    column-color : 선의 색상을 지정 / 기본값 : 요소의 글자색과 동일
+
+    column-rule : 두께 종류 색상;
+
+    구분선(column-rule)은 단과 단 사이의 간격 중간에 위치함
+
   </template>
 </head>
 <body>
-
+  <p>What is Lorem Ipsum?
+    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+    
+    Why do we use it?
+    It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+    
+    
+    Where does it come from?
+    Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+    
+    The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.</p>
 </body>
 </html>

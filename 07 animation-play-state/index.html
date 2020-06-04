@@ -6,13 +6,50 @@
   <title>Document</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" integrity="sha256-gvEnj2axkqIj4wbYhPjbWV7zttgpzBVEgHub9AAZQD4=" crossorigin="anonymous" />
   <style>
+    body{
+      padding : 20px;
+    }
+    .box{
+      width : 150px;
+      height : 100px;
+      background : tomato;
+      border-radius : 10px;
+      animation : size-up 3s linear infinite alternate;
+      display : flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .box::before{
+      content : 'running';
+      font-size : 20px;
+      color : white;
+      font-weight : 700;
+    }
+    .box:hover{
+      animation-play-state : paused;
+      background : dodgerblue;
+    }
+    .box:hover::before{
+      content : 'paused';
+    }
 
+    @keyframes size-up{
+      0%{
+        width : 150px;
+      }
+      100%{
+        width : 100%;
+      }
+    }
   </style>
   <template>
-  
+    animation-play-state : 애니메이션의 재생과 정지를 설정
+
+    running : 애니메이션을 동작 / 기본값 : running
+    paused : 애니메이션 동작을 정지
   </template>
 </head>
 <body>
-
+  <div class="box"></div>
 </body>
 </html>

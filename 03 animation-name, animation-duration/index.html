@@ -6,13 +6,46 @@
   <title>Document</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" integrity="sha256-gvEnj2axkqIj4wbYhPjbWV7zttgpzBVEgHub9AAZQD4=" crossorigin="anonymous" />
   <style>
+    .box{
+      width:100px;
+      height : 100px;
+      background : tomato;
+      border-radius:10px;
+    }
 
+    .box:hover{
+      animation-name : my-animation;
+      animation-duration : 3.3s;
+    }
+
+    @keyframes my-animation{
+      0% {
+        width : 100px;
+        background : tomato;
+      }
+      75%{
+        width : 500px;
+        background : dodgerblue;
+      }
+      100% {
+        width : 300px;
+        background : yellowgreen;
+      }
+    }
   </style>
   <template>
-  
+    animation-name : @keyframes 규칙(애니메이션)의 이름을 지정
+
+    none : 애니메이션을 지정하지 않음 / 기본값 : none
+    @keyframes 이름 : 이름이 일치하는 @keyframes 규칙의 애니메이션을 적용
+    
+    ///////////////////////////////////////////
+    animation-duration : 애니메이션의 지속 시간 설정
+    
+    시간 : 지속 시간을 설정 / 기본값 : 0s
   </template>
 </head>
 <body>
-
+<div class="box"></div
 </body>
 </html>

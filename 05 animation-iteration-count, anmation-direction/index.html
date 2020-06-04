@@ -6,13 +6,57 @@
   <title>Document</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" integrity="sha256-gvEnj2axkqIj4wbYhPjbWV7zttgpzBVEgHub9AAZQD4=" crossorigin="anonymous" />
   <style>
+    .box{
+      width : 100px;
+      height : 100px;
+      background : tomato;
+      border-radius : 10px;
+      margin : 30px;
+      animation : movemove 2s;
+      animation-timing-function : linear;
+      /* animation-iteration-count : infinite; */
+      animation-iteration-count : 2;
+      /* alternate, alternate-reverse 반대방향도 횟수 소비함 */
+      
+      /* animation-direction : normal; */
+      /* animation-direction : reverse; */
+      /* animation-direction : alternate; */
+      animation-direction : alternate-reverse;
+    }
 
+    @keyframes movemove{
+      0%{
+        transform : translate(0, 0);
+      }
+      25%{
+        transform : translate(100px, 0);
+      }
+      50%{
+        transform : translate(100px, 100px);
+      }
+      75%{
+        transform : translate(0, 100px);
+      }
+      100%{
+        transform : translate(0, 0);
+      }
+    }
   </style>
   <template>
-  
+    animation-iteration-count : 애니메이션의 반복 횟수를 설정
+
+    숫자 : 반복 횟수를 설정 / 기본값 : 1
+    infinite : 무한 반복
+    ////////////////////////////
+    animation-direction : 애니메이션의 반복 방향을 설정
+
+    normal : 정방향만 반복 / 기본값 : normal
+    reverse : 역방향만 반복
+    alternate : 정방향에서 역방향으로 반복(왕복)
+    alternate-reverse : 역방향에서 정방향으로 반복(왕복)
   </template>
 </head>
 <body>
-
+  <div class="box"></div>
 </body>
 </html>
